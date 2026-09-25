@@ -339,6 +339,20 @@ body::before {
 .about-list li { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-weight: 600; color: var(--text-dark); }
 .about-list li svg { flex-shrink: 0; }
 
+/* Mobile: vídeo vira um retrato no topo, enquadrado no rosto, e o texto vem abaixo */
+@media (max-width: 859px) {
+  .section-about {
+    background: rgb(20,26,14);
+    padding: min(122vw, 580px) 0 72px;
+    min-height: 0;
+  }
+  .about-bg { bottom: auto; height: min(140vw, 660px); }
+  .about-bg .bg-video-el { object-position: 66% 30%; }
+  .bg-video-tint-about {
+    background: linear-gradient(180deg, rgba(20,26,14,0.1) 0%, rgba(20,26,14,0) 50%, rgba(20,26,14,0.75) 82%, rgb(20,26,14) 100%);
+  }
+}
+
 /* ---------- Benefícios ---------- */
 .benefits-grid {
   display: grid;
